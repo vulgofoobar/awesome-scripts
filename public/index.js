@@ -32,6 +32,16 @@ const binsJson = [
     description: "Outputs a random fun fact in your terminal.",
     category: "useless",
   },
+  {
+    name: "max_windows/max_windows",
+    description: "Maximize all open windows.",
+    category: "productivity",
+  },
+  {
+    name: "almost_maximize_windows/almost_maximize_windows",
+    description: "Almost maximize all open windows.",
+    category: "productivity",
+  },
 ];
 const binsContainer = document.querySelector(".bins-container");
 const categoriesElements = document.querySelectorAll(".category-item");

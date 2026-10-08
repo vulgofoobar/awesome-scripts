@@ -1,0 +1,127 @@
+#!/usr/bin/env ruby
+#
+# Almost maximize all open windows
+#
+# Window manager script that almost maximize and center open windows.
+# This is tailored to my two-monitor setup.
+# It may need some tweaks.
+#
+# OPTIONS:
+#   --help, -h          Show this help message
+#
+# USAGE:
+#   $ ./almost_maximize_windows
+#   # => Maximize all open windows
+#   $ ./almost_maximize_windows --help
+#   # => Outputs help message
+#
+# OS SUPPORT:
+#   MacOS
+#
+# SOURCE:
+#   https://github.com/lsfernandes92/awesome-scripts/
+#
+# WEBSITE:
+#   https://awesome-scripts.vercel.app/index.html
+require 'bundler/inline'
+gemfile do
+  source 'https://rubygems.org'
+  gem 'gum'
+end
+
+require 'gum'
+
+SCRIPT_NAME = Gum.style(
+  './almost_maximize_windows',
+  foreground: 1,
+)
+
+def show_help
+  help_text = <<~HELP
+    #{
+      Gum.format(<<~HEADER, type: :markdown)
+        # awesome@scripts > /bins > #{SCRIPT_NAME}
+      HEADER
+    }
+
+    #{
+      Gum.format(<<~MAIN, type: :markdown)
+        # WHAT THIS SCRIPT DO?
+              Almost maximize all open windows
+
+              Window manager script that almost maximize and center open windows.
+              This is tailored to my two-monitor setup.
+              It may need some tweaks.
+
+        # OPTIONS:
+              --help, -h          Show this help message
+
+        # USAGE:
+              $ ./almost_maximize_windows
+              # => Maximize all open windows
+              $ ./almost_maximize_windows --help
+              # => Outputs help message
+
+        # OS SUPPORT:
+              MacOS
+
+        # SOURCE:
+              https://github.com/lsfernandes92/awesome-scripts/
+
+        # WEBSITE:
+          https://awesome-scripts.vercel.app/index.html
+      MAIN
+    }
+  HELP
+
+  Gum.pager(help_text, soft_wrap: true)
+  exit 0
+end
+
+if ARGV.include?('--help') || ARGV.include?('-h')
+  show_help
+end
+
+system(<<~'COMMAND')
+  osascript <<'SCRIPT'
+  on windowCenterY(w)
+    tell application "System Events"
+      set {winX, winY} to position of w
+      set {winW, winH} to size of w
+    end tell
+    return winY + winH / 2
+  end windowCenterY
+
+  on externalMonitor(w)
+    return windowCenterY(w) < 0
+  end externalMonitor
+
+  tell application "System Events"
+    repeat with p in (every process whose background only is false)
+      set procName to name of p
+      repeat with w in (windows of p)
+        try
+          if my externalMonitor(w) then
+            if procName is in {"Surfshark", "Calendar", "Clock"} then
+              set position of w to {184, -890}
+              set size of w to {960, 700}
+            else
+              set position of w to {-200, -1026}
+              set size of w to {1728, 972}
+            end if
+          else if procName is "Surfshark" then
+            set position of w to {320, 150}
+            set size of w to {800, 600}
+          else if procName is in {"Calendar", "Clock"} then
+            set position of w to {240, 150}
+            set size of w to {960, 600}
+          else
+            set position of w to {72, 45}
+            set size of w to {1296, 810}
+          end if
+        end try
+      end repeat
+    end repeat
+  end tell
+  SCRIPT
+COMMAND
