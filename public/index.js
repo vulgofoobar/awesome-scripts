@@ -3,28 +3,19 @@ import { prependNavbarToContainer } from "./navbar.js";
 
 const binsJson = [
   {
-    name: "system-wide-bin/add-bins",
-    description: "Make individual bin executable system-wide.",
-    category: "utils",
-  },
-  {
     name: "show-off/show-off",
     description: "Make individual bin executable system-wide.",
-    category:   "glamorous",
+    category:   "utils",
   },
   {
-    name: "play-rimshot/rimshot",
+    name: "rimshot/rimshot",
     description: "Simply plays a rimshot sound.",
     category: "useless",
   },
+
   {
-    name: "open-editor/e",
-    description: "Quick shortcut to an editor (bash script).",
-    category: "productivity",
-  },
-  {
-    name: "open-editor-v2/ee",
-    description: "Quick shortcut to an editor (ruby script).",
+    name: "e/e",
+    description: "Quick shortcut to an editor.",
     category: "productivity",
   },
   {

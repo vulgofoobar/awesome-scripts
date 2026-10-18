@@ -1,0 +1,88 @@
+#!/usr/bin/env ruby
+#
+# Simply plays a rimshot sound.
+#
+# OS SUPPORT:
+#   Linux and MacOS
+#
+# SOURCE:
+#   https://github.com/lsfernandes92/awesome-scripts
+#
+# USAGE:
+#   $ ./rimshot
+#   # => plays a rimshot sound
+require 'bundler/inline'
+gemfile do
+  source 'https://rubygems.org'
+  gem 'gum'
+end
+
+DOWNLOADS_DIRECTORY = "#{ENV['HOME']}/Downloads"
+SOUND_FILE_NAME = 'rimshot.mp3'
+
+SCRIPT_NAME = Gum.style('./rimshot', foreground: 1)
+def show_help
+  header = <<~HEADER
+    # awesome@scripts > /bins > #{SCRIPT_NAME}
+  HEADER
+  main = <<~MAIN
+    # WHAT THIS SCRIPT DO?
+          Simply plays a rimshot sound.
+
+          When it gets run it plays a rimshot
+          sound on your system.
+
+    # OPTIONS:
+          --help, -h          Show this help message
+
+    # USAGE:
+          $ ./rimshot
+          # => plays a rimshot sound
+
+    # OS SUPPORT:
+          Linux and MacOS
+
+    # SOURCE:
+          https://github.com/lsfernandes92/awesome-scripts
+  MAIN
+
+  help_text = <<~HELP
+    #{Gum.format(header, type: :markdown)}
+    #{Gum.format(main, type: :markdown)}
+  HELP
+
+  Gum.pager(help_text, soft_wrap: true)
+  exit 0
+end
+
+if ARGV.include?('--help') || ARGV.include?('-h')
+  show_help
+  exit 0
+end
+
+def mp3_previously_downloaded?
+  !`find #{DOWNLOADS_DIRECTORY} -name "#{SOUND_FILE_NAME}"`.strip.empty?
+end
+
+def download_or_skip
+  unless mp3_previously_downloaded?
+    system "curl https://instantrimshot.com/audio/rimshot.mp3 -o #{DOWNLOADS_DIRECTORY}/#{SOUND_FILE_NAME} 2>/dev/null"
+  end
+end
+
+def play
+  os = RbConfig::CONFIG['host_os']
+
+  case os
+  when /darwin|mac os/
+    spawn "nohup afplay #{DOWNLOADS_DIRECTORY}/#{SOUND_FILE_NAME} > /dev/null"
+  when /linux/
+    spawn "nohup aplay #{DOWNLOADS_DIRECTORY}/#{SOUND_FILE_NAME} > /dev/null"
+  else
+    puts "⚠️ Unsupported OS. This script only works on MacOS and Linux. ¯\\_(ツ)_/¯"
+    exit 1
+  end
+end
+
+download_or_skip
+play

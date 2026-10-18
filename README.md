@@ -44,6 +44,15 @@ These scripts aim to automate tasks and set shortcuts whether for productivity o
 </br>
 </br>
 
+## >_COLLECTION
+
+The scripts can be found in [public/bins](./public/bins/) or [here](https://awesome-scripts.vercel.app/).
+
+</br>
+</br>
+</br>
+</br>
+
 ## >_FAQ
 ### What's a script BTW?
 
