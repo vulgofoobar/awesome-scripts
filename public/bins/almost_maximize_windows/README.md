@@ -63,11 +63,3 @@ MacOS
 
 ## >_SOURCE
 https://github.com/lsfernandes92/awesome-scripts/
-
-</br>
-</br>
-</br>
-</br>
-
-## >_WEBSITE
-https://awesome-scripts.vercel.app/index.html

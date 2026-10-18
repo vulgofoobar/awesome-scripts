@@ -1,10 +1,10 @@
-# >_./e
+# >_./rimshot
 
 ```text
  _______________________________________________________________________
 |[] awesome-scripts                                            [Q][_][F]|
 |"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""|"|
-|awesome@scripts /bin > ./e                                           | |
+|awesome@scripts /bin > ./rimshot                                     | |
 |                                                                     |_|
 |_____________________________________________________________________|/|
 ```
@@ -15,16 +15,7 @@
 </br>
 
 ## >_SHORT DESCRIPTION
-Quick shortcut to an editor.
-
-</br>
-</br>
-</br>
-</br>
-
-## >_DESCRIPTION
-This means that as I travel back and forth between editors, hey, I don't have 
-to re-learn any arcane commands. Neat!
+Simply plays a rimshot sound.
 
 </br>
 </br>
@@ -33,13 +24,8 @@ to re-learn any arcane commands. Neat!
 
 ## >_USAGE
 ```bash
-$ ./e
-# => opens the current directory in your editor
-```
-```bash
-$ e .
-$ e /usr/local
-# => opens the specified directory in your editor
+$ ./rimshot
+# => plays a rimshot sound
 ```
 
 </br>
@@ -56,4 +42,4 @@ Linux and MacOS
 </br>
 
 ## >_SOURCE
-https://github.com/lsfernandes92/awesome-scripts/tree/main/public/bins/open-editor/
+https://github.com/lsfernandes92/awesome-scripts

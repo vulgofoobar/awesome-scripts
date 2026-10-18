@@ -53,4 +53,4 @@ Linux and MacOS
 </br>
 
 ## >_SOURCE
-https://github.com/lsfernandes92/awesome-scripts/tree/main/public/bins/show-off/
+https://github.com/lsfernandes92/awesome-scripts

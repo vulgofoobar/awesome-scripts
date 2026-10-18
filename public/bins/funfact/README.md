@@ -62,4 +62,4 @@ Linux and MacOS
 </br>
 
 ## >_SOURCE
-https://github.com/lsfernandes92/awesome-scripts/tree/main/public/bins/funfact/
+https://github.com/lsfernandes92/awesome-scripts

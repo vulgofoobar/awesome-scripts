@@ -17,7 +17,7 @@
 #   Linux and MacOS
 #  
 # SOURCE:
-#   https://github.com/lsfernandes92/awesome-scripts/tree/main/public/bins/show-off/
+#   https://github.com/lsfernandes92/awesome-scripts
 require 'bundler/inline'
 gemfile do
   source 'https://rubygems.org'
@@ -143,7 +143,7 @@ def show_help
           Linux and MacOS
     
     # SOURCE:
-          https://github.com/lsfernandes92/awesome-scripts/tree/main/public/bins/show-off/
+          https://github.com/lsfernandes92/awesome-scripts
   MAIN
 
   help_text = <<~HELP

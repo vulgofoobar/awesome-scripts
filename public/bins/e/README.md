@@ -64,4 +64,4 @@ Linux and MacOS
 </br>
 
 ## >_SOURCE
-https://github.com/lsfernandes92/awesome-scripts/tree/main/public/bins/open-editor-v2/
+https://github.com/lsfernandes92/awesome-scripts

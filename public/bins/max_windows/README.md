@@ -1,10 +1,10 @@
-# >_./rimshot
+# >_./max_windows
 
 ```text
  _______________________________________________________________________
 |[] awesome-scripts                                            [Q][_][F]|
 |"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""|"|
-|awesome@scripts /bin > ./rimshot                                     | |
+|awesome@scripts /bin > ./max_windows                                  | |
 |                                                                     |_|
 |_____________________________________________________________________|/|
 ```
@@ -15,7 +15,7 @@
 </br>
 
 ## >_SHORT DESCRIPTION
-Simply plays a rimshot sound.
+Maximize all open windows on your system with customized positioning for a multi-monitor setup.
 
 </br>
 </br>
@@ -24,8 +24,11 @@ Simply plays a rimshot sound.
 
 ## >_USAGE
 ```bash
-$ ./rimshot
-# => plays a rimshot sound
+$ ./max_windows
+# => Maximize all open windows
+
+$ ./max_windows --help
+# => Outputs help message
 ```
 
 </br>
@@ -34,7 +37,7 @@ $ ./rimshot
 </br>
 
 ## >_OS SUPPORT
-Linux and MacOS
+MacOS
 
 </br>
 </br>
@@ -42,4 +45,4 @@ Linux and MacOS
 </br>
 
 ## >_SOURCE
-https://github.com/lsfernandes92/awesome-scripts/tree/main/public/bins/play-rimshot/
+https://github.com/lsfernandes92/awesome-scripts

@@ -2,7 +2,7 @@
 #
 # Outputs a random fun fact in your terminal
 #
-# When it gets run it simply outputs a 
+# When it gets run it simply outputs a
 # random fun fact in your terminal.
 #
 # OPTIONS:
@@ -14,9 +14,9 @@
 #
 # OS SUPPORT:
 #   Linux and MacOS
-#  
+#
 # SOURCE:
-#   https://github.com/lsfernandes92/awesome-scripts/tree/main/public/bins/funfact/
+#   https://github.com/lsfernandes92/awesome-scripts
 require 'bundler/inline'
 gemfile do
   source 'https://rubygems.org'
@@ -36,8 +36,8 @@ def show_help
   main = <<~MAIN
     # WHAT THIS SCRIPT DO?
           Outputs a random fun fact in your terminal
-        
-          When it gets run it simply outputs a 
+
+          When it gets run it simply outputs a
           random fun fact in your terminal.
 
     # OPTIONS:
@@ -46,19 +46,19 @@ def show_help
     # USAGE:
           $ ./funfact
           # => Outputs a random fun fact in your terminal
-    
+
     # OS SUPPORT:
           Linux and MacOS
-    
+
     # SOURCE:
-          https://github.com/lsfernandes92/awesome-scripts/tree/main/public/bins/funfact/
+          https://github.com/lsfernandes92/awesome-scripts
   MAIN
 
   help_text = <<~HELP
     #{Gum.format(header, type: :markdown)}
     #{Gum.format(main, type: :markdown)}
   HELP
-  
+
   Gum.pager(help_text, soft_wrap: true)
   exit 0
 end
