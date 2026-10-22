@@ -1,4 +1,4 @@
-/* 
+/*
 Global vars
 */
 :root {
@@ -8,7 +8,7 @@ Global vars
   --green-font-color: #00A96E;
 }
 
-/* 
+/*
 App fonts
 */
 @font-face {
@@ -20,7 +20,7 @@ App fonts
   src: local("Jersey 10 Charted"), local("Jersey10Charted"), url("./assets/fonts/Jersey10Charted-Regular.ttf");
 }
 
-/* 
+/*
 Page container
 */
 .container {
@@ -60,7 +60,6 @@ Main container
   font-size: 24px;
   font-family: var(--main-font);
   font-weight: 100;
-  border-radius: 1px;
   padding: 15px 15px;
   text-transform: capitalize;
   margin-bottom: 0.5em;
@@ -82,15 +81,12 @@ pre {
   position: relative;
 }
 
-code {
-  border-radius: 1px;
-  border: 2px solid white;
-}
-
 .language-ruby {
   font-size: 16px;
   letter-spacing: 1px;
   font-family: var(--main-font);
+  overflow-x: auto;
+  max-width: 100%;
 }
 
 .copy-button {
