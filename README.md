@@ -1,4 +1,4 @@
-# >_ Awesome Scripts
+# >_Awesome Scripts
 
 This website contains a modest collection of **scripts** I've written. Built with **HTML** + plain **JS** and **CSS**.
 
@@ -44,7 +44,7 @@ These scripts aim to automate tasks and set shortcuts whether for productivity o
 </br>
 </br>
 
-## >_COLLECTION
+## >_Collection
 
 The scripts can be found in [public/bins](./public/bins/) or [here](https://awesome-scripts.vercel.app/).
 
@@ -108,15 +108,6 @@ The scripts can be found in [public/bins](./public/bins/) or [here](https://awes
 </br>
 </br>
 
-## >_Themes
+## >_CHANGELOG
 
-These are my fav themes from highlight.js:
-
-* tokyo-night-dark
-* nord
-* ir-black
-* hybrid
-* gradient-dark
-* gml
-* github-dark-dimmed
-* felipec
+See [./CHANGELOG.MD](./CHANGELOG.md)
