@@ -51,7 +51,7 @@ const links = () => {
   githubLink.textContent = "GITHUB"
 
   // supportLink.href = "https://ko-fi.com/variosonrails"
-  supportLink.href = "https://buymeacoffee.com/jaggiesweekly"
+  supportLink.href = "https://buymeacoffee.com/vulgofoobar"
   supportLink.target = "_blank"
   supportLink.classList.add("footer-link")
   supportLink.textContent = "SUPPORT ME"
@@ -72,7 +72,7 @@ const paragraph = () => {
   heart.classList.add("footer-heart")
   heart.textContent = "<3"
 
-  portifolioLink.href = "https://lsfernandes92.github.io/portifolio/"
+  portifolioLink.href = "https://vulgofoobar.github.io/portifolio/"
   portifolioLink.target = "_blank"
   portifolioLink.classList.add("me")
   portifolioLink.textContent = "LUCAS FERNANDES"

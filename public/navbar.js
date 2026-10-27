@@ -51,7 +51,7 @@ const rlinks = () => {
   githubLink.textContent = "GITHUB"
 
   // supportLink.href = "https://ko-fi.com/variosonrails"
-  supportLink.href = "https://buymeacoffee.com/jaggiesweekly"
+  supportLink.href = "https://buymeacoffee.com/vulgofoobar"
   supportLink.target = "_blank"
   supportLink.classList.add("navbar-link")
   supportLink.textContent = "SUPPORT ME"
