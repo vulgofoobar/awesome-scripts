@@ -33,3 +33,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Security
 - (none yet)
+
+## Feedback
+
+Found a bug? Have a feature request? Please report it [here](https://github.com/vulgofoobar/awesome-scripts/issues).
+
+## Links
+
+[Documentation](https://github.com/vulgofoobar/awesome-scripts/blob/main/README.md)
+
+[My blog](https://vulgofoobar.tech/about/)
+
+[Buy me a coffee](https://buymeacoffee.com/vulgofoobar)
+
+[Support me on Ko-fi](https://ko-fi.com/vulgofoobar)
+
+[Mastodon](https://ruby.social/@jaggiesweekly)
+
+---
+
+*Made with ❤️ by Foobar*
